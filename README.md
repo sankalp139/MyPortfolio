@@ -1,2 +1,2 @@
 # MyPortfolio
-This repository holds my Portfolio with detailed description relted to my work Experiece as a DevOps Engineer.
+This repository contains my Portfolio with detailed descriptions of my work experience as a DevOps Engineer.
