@@ -1,0 +1,30 @@
+name: Deploy Portfolio to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Runs on every push to main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js (for site generators, optional)
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Build Site (Optional)
+        run: |
+          echo "Building site..."
+          # Add build steps for Jekyll, Hugo, Gatsby, etc.
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages  # Deploys to gh-pages branch
+          folder: .  # Deploys root directory
